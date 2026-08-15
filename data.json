@@ -1,0 +1,261 @@
+const siteData = {
+    "stats": {
+        "totalPrize": "$3,600,000",
+        "activeTournaments": 3,
+        "trackedTeams": 4
+    },
+    "upcomingMatch": {
+        "teamA": "FaZe Clan",
+        "teamB": "Team Vitality",
+        "event": "BLAST Open Fall 2026",
+        "timestamp": new Date().getTime() + (86400000 * 2) // 2 days from current time
+    },
+    "tournaments": [
+        {
+            "id": "t1",
+            "status": "upcoming",
+            "name": "PGL Major Singapore 2026",
+            "logo": "https://placehold.co/60x60/161b22/58a6ff?text=PGL",
+            "date": "Nov 25 - Dec 13, 2026",
+            "location": "Kallang, Singapore",
+            "prize": "$1,250,000",
+            "prizeBreakdown": "1st: $500,000 | 2nd: $170,000 | 3rd-4th: $80,000",
+            "teams": [
+                {
+                    "name": "Team Falcons",
+                    "logo": "https://placehold.co/30x30/000000/ffffff?text=FLC"
+                },
+                {
+                    "name": "Team Vitality",
+                    "logo": "https://placehold.co/30x30/ffff00/000000?text=VIT"
+                },
+                {
+                    "name": "Team Spirit",
+                    "logo": "https://placehold.co/30x30/ffffff/000000?text=TS"
+                }
+            ]
+        },
+        {
+            "id": "t2",
+            "status": "upcoming",
+            "name": "BLAST Open Fall 2026",
+            "logo": "https://placehold.co/60x60/161b22/58a6ff?text=BLAST",
+            "date": "Aug 26 - Sep 6, 2026",
+            "location": "Porto, Portugal",
+            "prize": "$1,100,000",
+            "prizeBreakdown": "1st: $450,000 | 2nd: $150,000 | 3rd-4th: $75,000",
+            "teams": [
+                {
+                    "name": "FURIA",
+                    "logo": "https://placehold.co/30x30/000000/ffffff?text=FUR"
+                },
+                {
+                    "name": "MOUZ",
+                    "logo": "https://placehold.co/30x30/ff0000/ffffff?text=MOUZ"
+                },
+                {
+                    "name": "G2 Esports",
+                    "logo": "https://placehold.co/30x30/000000/ffffff?text=G2"
+                }
+            ]
+        },
+        {
+            "id": "t3",
+            "status": "past",
+            "name": "IEM Cologne Major 2026",
+            "logo": "https://placehold.co/60x60/161b22/58a6ff?text=IEM",
+            "date": "Jun 2 - Jun 21, 2026",
+            "location": "Cologne, Germany",
+            "prize": "$1,250,000",
+            "prizeBreakdown": "1st: $400,000 | 2nd: $180,000 | 3rd-4th: $80,000",
+            "winner": "Team Falcons",
+            "runnerUp": "Team Vitality"
+        }
+    ],
+    "teams": [
+        {
+            "id": "team1",
+            "rank": 1,
+            "region": "Europe",
+            "name": "Team Falcons",
+            "logo": "https://placehold.co/50x50/000000/ffffff?text=FLC",
+            "location": "Saudi Arabia",
+            "description": "Premier esports organization dominating the 2026 CS2 circuit.",
+            "players": [
+                {
+                    "handle": "NiKo",
+                    "role": "Rifler / Entry",
+                    "rating": "1.24",
+                    "country": "Bosnia",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "m0NESY",
+                    "role": "AWPer",
+                    "rating": "1.29",
+                    "country": "Russia",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "karrigan",
+                    "role": "In-Game Leader",
+                    "rating": "0.98",
+                    "country": "Denmark",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "TeSeS",
+                    "role": "Support",
+                    "rating": "1.08",
+                    "country": "Denmark",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "kyousuke",
+                    "role": "Rifler",
+                    "rating": "1.15",
+                    "country": "Japan",
+                    "weapon": "AK-47"
+                }
+            ]
+        },
+        {
+            "id": "team2",
+            "rank": 2,
+            "region": "Europe",
+            "name": "Team Vitality",
+            "logo": "https://placehold.co/50x50/ffff00/000000?text=VIT",
+            "location": "France",
+            "description": "European powerhouse featuring legendary AWPer ZywOo.",
+            "players": [
+                {
+                    "handle": "ZywOo",
+                    "role": "AWPer",
+                    "rating": "1.32",
+                    "country": "France",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "apEX",
+                    "role": "In-Game Leader",
+                    "rating": "0.96",
+                    "country": "France",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "ropz",
+                    "role": "Lurker",
+                    "rating": "1.18",
+                    "country": "Estonia",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "flameZ",
+                    "role": "Entry",
+                    "rating": "1.10",
+                    "country": "Israel",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "mezii",
+                    "role": "Support",
+                    "rating": "1.04",
+                    "country": "UK",
+                    "weapon": "Galil AR"
+                }
+            ]
+        },
+        {
+            "id": "team3",
+            "rank": 3,
+            "region": "Europe",
+            "name": "Team Spirit",
+            "logo": "https://placehold.co/50x50/ffffff/000000?text=TS",
+            "location": "Serbia",
+            "description": "High-powered lineup led by star rifler donk.",
+            "players": [
+                {
+                    "handle": "donk",
+                    "role": "Rifler / Entry",
+                    "rating": "1.35",
+                    "country": "Russia",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "sh1ro",
+                    "role": "AWPer",
+                    "rating": "1.22",
+                    "country": "Russia",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "magixx",
+                    "role": "Support",
+                    "rating": "1.02",
+                    "country": "Russia",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "zont1x",
+                    "role": "Lurker",
+                    "rating": "1.11",
+                    "country": "Ukraine",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "tN1R",
+                    "role": "Rifler",
+                    "rating": "1.05",
+                    "country": "Russia",
+                    "weapon": "AK-47"
+                }
+            ]
+        },
+        {
+            "id": "team4",
+            "rank": 4,
+            "region": "Americas",
+            "name": "FURIA Esports",
+            "logo": "https://placehold.co/50x50/000000/ffffff?text=FUR",
+            "location": "Brazil",
+            "description": "Aggressive playstyle organization representing South American CS2.",
+            "players": [
+                {
+                    "handle": "KSCERATO",
+                    "role": "Rifler",
+                    "rating": "1.20",
+                    "country": "Brazil",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "yuurih",
+                    "role": "Entry",
+                    "rating": "1.14",
+                    "country": "Brazil",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "Fallen",
+                    "role": "AWPer / IGL",
+                    "rating": "1.01",
+                    "country": "Brazil",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "chelo",
+                    "role": "Rifler",
+                    "rating": "1.03",
+                    "country": "Brazil",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "skullz",
+                    "role": "Support",
+                    "rating": "1.05",
+                    "country": "Brazil",
+                    "weapon": "AK-47"
+                }
+            ]
+        }
+    ]
+};

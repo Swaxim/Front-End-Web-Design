@@ -115,3 +115,22 @@ footer {
     font-size: 0.85rem;
     color: #8b949e;
 }
+
+/*Member 3*/
+/* Contact Form */
+.form-control {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+.form-control:focus {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 0.2rem rgba(88, 166, 255, 0.15);
+}
+
+.form-control::placeholder {
+    color: #8b949e;
+}

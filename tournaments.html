@@ -10,28 +10,23 @@
 </head>
 
 <body>
-    <!-- Match Countdown Header -->
-    <div class="ticker-banner py-2 px-4 text-center text-light">
-        🔥 <strong>NEXT MATCH:</strong> <span id="ticker-teams"></span> —
-        <span class="text-accent fw-bold" id="ticker-countdown">00h 00m 00s</span>
-        <span class="badge bg-secondary ms-2" id="ticker-event"></span>
-    </div>
-
-    <!-- Navigation Bar -->
+    <!-- navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-accent" href="index.html">CS2 HUB</a>
+            <a class="navbar-brand fw-bold text-accent" href="home.html">CS2 HUB</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+    
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active fw-semibold" href="tournaments.html">Tournaments</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="tournaments.html">Tournaments</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="teams.html">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
                 </ul>
-
+    
                 <div class="d-flex align-items-center gap-3">
                     <input type="text" id="global-search"
                         class="form-control form-control-sm bg-dark text-light border-secondary"
@@ -43,7 +38,7 @@
     </nav>
 
     <div class="container my-4">
-        <!-- Analytical Stat Counters -->
+        <!-- stats -->
         <div class="row g-3 mb-4 text-center">
             <div class="col-md-4">
                 <div class="bg-dark-card p-3">
@@ -72,8 +67,20 @@
                 <button id="btn-past" class="btn btn-sm btn-outline-primary">Past</button>
             </div>
         </div>
+        
+        <div id="cookie-banner"
+            class="position-fixed bottom-0 start-0 end-0 bg-dark text-light p-3 border-top border-secondary shadow"
+            style="display: none; z-index: 1050;">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <span>We use cookies to remember your navigation preferences. Accept?</span>
+                <div>
+                    <button id="accept-cookies-btn" class="btn btn-primary btn-sm me-2">Accept</button>
+                    <button id="decline-cookies-btn" class="btn btn-outline-light btn-sm">Decline</button>
+                </div>
+            </div>
+        </div>
 
-        <!-- Tournament List Container -->
+        <!-- tournament list -->
         <div id="tournament-list" class="d-flex flex-column gap-3"></div>
     </div>
 
@@ -82,32 +89,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Cookie Requirement
-            document.cookie = "last_page=tournaments.html; path=/";
+            // cookie
+            const hasConsent = localStorage.getItem("cookie_consent");
 
-            // Load Stat Banner
+            if (hasConsent === "granted") {
+                setLastPageCookie();
+            } else if (hasConsent === null) {
+                $("#cookie-banner").fadeIn();
+            }
+
+            $("#accept-cookies-btn").on("click", function () {
+                localStorage.setItem("cookie_consent", "granted");
+                setLastPageCookie();
+                $("#cookie-banner").fadeOut();
+            });
+
+            $("#decline-cookies-btn").on("click", function () {
+                localStorage.setItem("cookie_consent", "denied");
+                $("#cookie-banner").fadeOut();
+            });
+
+            function setLastPageCookie() {
+                document.cookie = "last_page=tournaments.html; path=/; SameSite=Lax";
+            }
+
+            // stat banner
             $("#stat-prize").text(siteData.stats.totalPrize);
             $("#stat-events").text(siteData.stats.activeTournaments);
             $("#stat-teams").text(siteData.stats.trackedTeams);
 
-            // Countdown Timer Logic
-            const match = siteData.upcomingMatch;
-            $("#ticker-teams").text(`${match.teamA} vs ${match.teamB}`);
-            $("#ticker-event").text(match.event);
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const diff = match.timestamp - now;
-                if (diff > 0) {
-                    const hrs = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    const secs = Math.floor((diff % (1000 * 60)) / 1000);
-                    $("#ticker-countdown").text(`${hrs}h ${mins}m ${secs}s`);
-                }
-            }
-            setInterval(updateCountdown, 1000);
-
-            // Session Storage Filter Requirement
+            // tournament filter
             let currentFilter = sessionStorage.getItem("tournamentFilter") || "upcoming";
 
             function updateActiveButton() {
@@ -129,7 +140,7 @@
                     filtered = filtered.filter(t => t.name.toLowerCase().includes(filterText.toLowerCase()) || t.location.toLowerCase().includes(filterText.toLowerCase()));
                 }
 
-                // Local Storage Requirement
+                // save favourite
                 const savedFavorites = JSON.parse(localStorage.getItem("fav_tournaments") || "[]");
 
                 filtered.forEach(t => {
@@ -137,7 +148,6 @@
                     let subInfo = t.status === "upcoming"
                         ? `<div><small class="text-secondary d-block">Attending Teams</small>${t.teams.map(team => `<img src="${team.logo}" class="rounded-circle me-1" width="24" height="24" title="${team.name}">`).join('')}</div>`
                         : `<div><small class="text-secondary d-block">Results</small><span class="badge bg-success me-1">🥇 ${t.winner}</span><span class="badge bg-secondary">🥈 ${t.runnerUp}</span></div>`;
-
                     const html = `
             <div class="list-row-item p-3" data-id="${t.id}">
               <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
@@ -185,19 +195,19 @@
                 renderTournaments($("#global-search").val());
             });
 
-            // Expandable Details View on Row Click
+            // expand details on click
             $(document).on("click", ".list-row-item", function (e) {
                 if ($(e.target).hasClass("fav-btn")) return;
                 const id = $(this).data("id");
                 $(`#panel-${id}`).slideToggle(200);
             });
 
-            // Search Filtering
+            // search filter
             $("#global-search").on("input", function () {
                 renderTournaments($(this).val());
             });
 
-            // Bookmarking Toggle (localStorage)
+            // bookmark toggle
             $(document).on("click", ".fav-btn", function (e) {
                 e.stopPropagation();
                 const id = $(this).data("id");

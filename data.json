@@ -1,14 +1,14 @@
 const siteData = {
     "stats": {
-        "totalPrize": "$3,600,000",
-        "activeTournaments": 3,
-        "trackedTeams": 4
+        "totalPrize": "$8,500,000",
+        "activeTournaments": 6,
+        "trackedTeams": 8
     },
     "upcomingMatch": {
         "teamA": "FaZe Clan",
         "teamB": "Team Vitality",
         "event": "BLAST Open Fall 2026",
-        "timestamp": new Date().getTime() + (86400000 * 2) // 2 days from current time
+        "timestamp": new Date().getTime() + (86400000 * 2) // 2 days from now
     },
     "tournaments": [
         {
@@ -32,6 +32,10 @@ const siteData = {
                 {
                     "name": "Team Spirit",
                     "logo": "https://placehold.co/30x30/ffffff/000000?text=TS"
+                },
+                {
+                    "name": "Natus Vincere",
+                    "logo": "https://placehold.co/30x30/fff000/000000?text=NAVI"
                 }
             ]
         },
@@ -56,11 +60,39 @@ const siteData = {
                 {
                     "name": "G2 Esports",
                     "logo": "https://placehold.co/30x30/000000/ffffff?text=G2"
+                },
+                {
+                    "name": "FaZe Clan",
+                    "logo": "https://placehold.co/30x30/e43d12/ffffff?text=FAZE"
                 }
             ]
         },
         {
             "id": "t3",
+            "status": "upcoming",
+            "name": "ESL Pro League Season 23",
+            "logo": "https://placehold.co/60x60/161b22/58a6ff?text=ESL",
+            "date": "Oct 1 - Oct 20, 2026",
+            "location": "Saint Julian's, Malta",
+            "prize": "$850,000",
+            "prizeBreakdown": "1st: $200,000 | 2nd: $90,000 | 3rd-4th: $50,000",
+            "teams": [
+                {
+                    "name": "Team Liquid",
+                    "logo": "https://placehold.co/30x30/002b49/ffffff?text=TL"
+                },
+                {
+                    "name": "MOUZ",
+                    "logo": "https://placehold.co/30x30/ff0000/ffffff?text=MOUZ"
+                },
+                {
+                    "name": "Team Spirit",
+                    "logo": "https://placehold.co/30x30/ffffff/000000?text=TS"
+                }
+            ]
+        },
+        {
+            "id": "t4",
             "status": "past",
             "name": "IEM Cologne Major 2026",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=IEM",
@@ -70,6 +102,30 @@ const siteData = {
             "prizeBreakdown": "1st: $400,000 | 2nd: $180,000 | 3rd-4th: $80,000",
             "winner": "Team Falcons",
             "runnerUp": "Team Vitality"
+        },
+        {
+            "id": "t5",
+            "status": "past",
+            "name": "BLAST Premier Spring Final 2026",
+            "logo": "https://placehold.co/60x60/161b22/58a6ff?text=BLAST",
+            "date": "Jun 10 - Jun 15, 2026",
+            "location": "London, United Kingdom",
+            "prize": "$425,000",
+            "prizeBreakdown": "1st: $200,000 | 2nd: $85,000 | 3rd-4th: $40,000",
+            "winner": "Team Spirit",
+            "runnerUp": "Natus Vincere"
+        },
+        {
+            "id": "t6",
+            "status": "past",
+            "name": "IEM Chengdu 2026",
+            "logo": "https://placehold.co/60x60/161b22/58a6ff?text=IEM",
+            "date": "Apr 8 - Apr 14, 2026",
+            "location": "Chengdu, China",
+            "prize": "$250,000",
+            "prizeBreakdown": "1st: $100,000 | 2nd: $42,000 | 3rd-4th: $20,000",
+            "winner": "MOUZ",
+            "runnerUp": "FaZe Clan"
         }
     ],
     "teams": [
@@ -78,7 +134,7 @@ const siteData = {
             "rank": 1,
             "region": "Europe",
             "name": "Team Falcons",
-            "logo": "https://placehold.co/50x50/000000/ffffff?text=FLC",
+            "logo": "/media/falcons_logo.webp",
             "location": "Saudi Arabia",
             "description": "Premier esports organization dominating the 2026 CS2 circuit.",
             "players": [
@@ -124,7 +180,7 @@ const siteData = {
             "rank": 2,
             "region": "Europe",
             "name": "Team Vitality",
-            "logo": "https://placehold.co/50x50/ffff00/000000?text=VIT",
+            "logo": "/media/Vitality_logo.jpg",
             "location": "France",
             "description": "European powerhouse featuring legendary AWPer ZywOo.",
             "players": [
@@ -170,7 +226,7 @@ const siteData = {
             "rank": 3,
             "region": "Europe",
             "name": "Team Spirit",
-            "logo": "https://placehold.co/50x50/ffffff/000000?text=TS",
+            "logo": "/media/spirit_logo.png",
             "location": "Serbia",
             "description": "High-powered lineup led by star rifler donk.",
             "players": [
@@ -214,9 +270,147 @@ const siteData = {
         {
             "id": "team4",
             "rank": 4,
+            "region": "Europe",
+            "name": "Natus Vincere",
+            "logo": "/media/navi_logo.png",
+            "location": "Ukraine",
+            "description": "Tactical powerhouse with tactical discipline and high individual skill.",
+            "players": [
+                {
+                    "handle": "b1t",
+                    "role": "Rifler",
+                    "rating": "1.14",
+                    "country": "Ukraine",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "jL",
+                    "role": "Entry / Rifler",
+                    "rating": "1.16",
+                    "country": "Lithuania",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "Aleksib",
+                    "role": "In-Game Leader",
+                    "rating": "0.95",
+                    "country": "Finland",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "iIMOR",
+                    "role": "AWPer",
+                    "rating": "1.10",
+                    "country": "Ukraine",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "w0nderful",
+                    "role": "Support",
+                    "rating": "1.07",
+                    "country": "Ukraine",
+                    "weapon": "AK-47"
+                }
+            ]
+        },
+        {
+            "id": "team5",
+            "rank": 5,
+            "region": "Europe",
+            "name": "MOUZ",
+            "logo": "/media/mouz_logo.png",
+            "location": "Germany",
+            "description": "Young squad known for high explosive firepower and structured team execution.",
+            "players": [
+                {
+                    "handle": "torzsi",
+                    "role": "AWPer",
+                    "rating": "1.17",
+                    "country": "Hungary",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "xertioN",
+                    "role": "Entry",
+                    "rating": "1.15",
+                    "country": "Israel",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "siuhy",
+                    "role": "In-Game Leader",
+                    "rating": "0.99",
+                    "country": "Poland",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "Jimpphat",
+                    "role": "Lurker",
+                    "rating": "1.18",
+                    "country": "Finland",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "Brollan",
+                    "role": "Rifler",
+                    "rating": "1.11",
+                    "country": "Sweden",
+                    "weapon": "AK-47"
+                }
+            ]
+        },
+        {
+            "id": "team6",
+            "rank": 6,
+            "region": "Europe",
+            "name": "FaZe Clan",
+            "logo": "/media/faze_logo.png",
+            "location": "USA / Europe",
+            "description": "Legendary international roster capable of clutch comebacks.",
+            "players": [
+                {
+                    "handle": "frozen",
+                    "role": "Rifler",
+                    "rating": "1.16",
+                    "country": "Slovakia",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "rain",
+                    "role": "Entry",
+                    "rating": "1.06",
+                    "country": "Norway",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "broky",
+                    "role": "AWPer",
+                    "rating": "1.15",
+                    "country": "Latvia",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "elige",
+                    "role": "Rifler",
+                    "rating": "1.13",
+                    "country": "USA",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "snappi",
+                    "role": "In-Game Leader",
+                    "rating": "0.92",
+                    "country": "Denmark",
+                    "weapon": "Galil AR"
+                }
+            ]
+        },
+        {
+            "id": "team7",
+            "rank": 7,
             "region": "Americas",
             "name": "FURIA Esports",
-            "logo": "https://placehold.co/50x50/000000/ffffff?text=FUR",
+            "logo": "/media/furia_logo.svg",
             "location": "Brazil",
             "description": "Aggressive playstyle organization representing South American CS2.",
             "players": [
@@ -254,6 +448,52 @@ const siteData = {
                     "rating": "1.05",
                     "country": "Brazil",
                     "weapon": "AK-47"
+                }
+            ]
+        },
+        {
+            "id": "team8",
+            "rank": 8,
+            "region": "Americas",
+            "name": "Team Liquid",
+            "logo": "/media/liquid_logo.png",
+            "location": "USA",
+            "description": "North American flagship organization rebuilt for international competition.",
+            "players": [
+                {
+                    "handle": "NAF",
+                    "role": "Lurker / Support",
+                    "rating": "1.14",
+                    "country": "Canada",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "YEKINDAR",
+                    "role": "Entry",
+                    "rating": "1.09",
+                    "country": "Latvia",
+                    "weapon": "AK-47"
+                },
+                {
+                    "handle": "ultimate",
+                    "role": "AWPer",
+                    "rating": "1.12",
+                    "country": "Poland",
+                    "weapon": "AWP"
+                },
+                {
+                    "handle": "jks",
+                    "role": "Support",
+                    "rating": "1.05",
+                    "country": "Australia",
+                    "weapon": "M4A1-S"
+                },
+                {
+                    "handle": "mithR",
+                    "role": "In-Game Leader",
+                    "rating": "0.94",
+                    "country": "Denmark",
+                    "weapon": "M4A1-S"
                 }
             ]
         }

@@ -7,14 +7,21 @@
     <title>Tournaments - CS2 Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 
 <body>
+    <script>
+        if (document.cookie.includes("themePreference=light")) {
+            document.body.classList.add("light-theme");
+        }
+    </script>
+
     <!--constant nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
 
-            <a class="navbar-brand fw-bold text-accent" href="index.html">
+            <a class="navbar-brand fw-bold text-accent" href="home.html">
                 CS2 HUB
             </a>
 
@@ -40,9 +47,23 @@
                 </a>
             </div>
 
-            <span class="badge bg-secondary">
-                CS2 World Rankings
-            </span>
+            <div class="navbar-actions d-flex align-items-center gap-3">
+
+                <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button">
+                    Light Theme
+                </button>
+
+                <a href="login.html" class="btn btn-primary btn-sm" id="loginButton">
+                    Login
+                </a>
+
+                <div id="userArea" class="align-items-center gap-2" style="display: none;">
+                    <span id="welcomeUser" class="text-light fw-semibold"></span>
+                    <button id="logoutButton" class="btn btn-outline-light btn-sm">
+                        Logout
+                    </button>
+                </div>
+            </div>
 
         </div>
     </nav>
@@ -58,108 +79,108 @@
 
     <!-- 2x3 gallery design -->
     <section class="container pb-5">
-    <div class="row g-4">
+        <div class="row g-4">
 
-        <!-- Image 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-                <img src="media/comp_match.jpg" class="card-img-top" alt="CS2 Match">
-                <div class="card-body">
-                    <h5 class="card-title">Competitive Match</h5>
-                    <p class="card-text">
-                        Intense competitive action from Counter-Strike 2.
-                    </p>
+            <!-- Image 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="media/comp_match.jpg" class="card-img-top" alt="CS2 Match">
+                    <div class="card-body">
+                        <h5 class="card-title">Competitive Match</h5>
+                        <p class="card-text">
+                            Intense competitive action from Counter-Strike 2.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Image 2 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-                <img src="media/team_player" class="card-img-top" alt="CS2 Team">
-                <div class="card-body">
-                    <h5 class="card-title">Professional Teams</h5>
-                    <p class="card-text">
-                        Professional teams competing at the highest level.
-                    </p>
+            <!-- Image 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="media/team_player" class="card-img-top" alt="CS2 Team">
+                    <div class="card-body">
+                        <h5 class="card-title">Professional Teams</h5>
+                        <p class="card-text">
+                            Professional teams competing at the highest level.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Image 3 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-                <img src="media/tournaments" class="card-img-top" alt="CS2 Tournament">
-                <div class="card-body">
-                    <h5 class="card-title">Major Tournament</h5>
-                    <p class="card-text">
-                        Highlights from major Counter-Strike 2 tournaments.
-                    </p>
+            <!-- Image 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="media/tournaments" class="card-img-top" alt="CS2 Tournament">
+                    <div class="card-body">
+                        <h5 class="card-title">Major Tournament</h5>
+                        <p class="card-text">
+                            Highlights from major Counter-Strike 2 tournaments.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Image 4 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-                <img src="media/professional_players" class="card-img-top" alt="CS2 Player">
-                <div class="card-body">
-                    <h5 class="card-title">Professional Players</h5>
-                    <p class="card-text">
-                        Skilled players showcasing their talent in CS2.
-                    </p>
+            <!-- Image 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="media/professional_players" class="card-img-top" alt="CS2 Player">
+                    <div class="card-body">
+                        <h5 class="card-title">Professional Players</h5>
+                        <p class="card-text">
+                            Skilled players showcasing their talent in CS2.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Image 5 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-                <img src="media/esports_action" class="card-img-top" alt="CS2 Esports">
-                <div class="card-body">
-                    <h5 class="card-title">Esports Action</h5>
-                    <p class="card-text">
-                        Exciting moments from the competitive CS2 scene.
-                    </p>
+            <!-- Image 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="media/esports_action" class="card-img-top" alt="CS2 Esports">
+                    <div class="card-body">
+                        <h5 class="card-title">Esports Action</h5>
+                        <p class="card-text">
+                            Exciting moments from the competitive CS2 scene.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Image 6 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-                <img src="media/championship" class="card-img-top" alt="CS2 Championship">
-                <div class="card-body">
-                    <h5 class="card-title">Championship Moments</h5>
-                    <p class="card-text">
-                        Memorable moments from CS2 championship events.
-                    </p>
+            <!-- Image 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="media/championship" class="card-img-top" alt="CS2 Championship">
+                    <div class="card-body">
+                        <h5 class="card-title">Championship Moments</h5>
+                        <p class="card-text">
+                            Memorable moments from CS2 championship events.
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </div>
+    </section>
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
 
-    </div>
-</section>
-<footer class="py-4 mt-5">
-    <div class="container text-center">
+            <h5 class="fw-bold">CS2 HUB</h5>
 
-        <h5 class="fw-bold">CS2 HUB</h5>
+            <p class="text-secondary mb-2">
+                Your hub for Counter-Strike 2 tournaments, teams, and community.
+            </p>
 
-        <p class="text-secondary mb-2">
-            Your hub for Counter-Strike 2 tournaments, teams, and community.
-        </p>
+            <div class="mb-3">
+                <a href="#" class="text-decoration-none me-3">Facebook</a>
+                <a href="#" class="text-decoration-none me-3">Instagram</a>
+                <a href="#" class="text-decoration-none">YouTube</a>
+            </div>
 
-        <div class="mb-3">
-            <a href="#" class="text-decoration-none me-3">Facebook</a>
-            <a href="#" class="text-decoration-none me-3">Instagram</a>
-            <a href="#" class="text-decoration-none">YouTube</a>
+            <p class="text-secondary small mb-0">
+                &copy; 2026 CS2 HUB. All rights reserved.
+            </p>
+
         </div>
+    </footer>
 
-        <p class="text-secondary small mb-0">
-            &copy; 2026 CS2 HUB. All rights reserved.
-        </p>
-
-    </div>
-</footer>
-    
 </body>

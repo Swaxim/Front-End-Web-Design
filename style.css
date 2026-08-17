@@ -794,3 +794,13 @@ body.light-theme .about-service-card {
 body.light-theme .value-item {
     border-bottom-color: #d6dde6;
 }
+
+/*LIGHT THEME - MOBILE NAVBAR*/
+
+body.light-theme .navbar-toggler {
+    border-color: #64748b;
+}
+
+body.light-theme .navbar-toggler-icon {
+    filter: invert(1);
+}

@@ -443,3 +443,119 @@ footer {
         width: 100%;
     }
 }
+
+/*COOKIE CONSENT*/
+
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(900px, calc(100% - 40px));
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 22px;
+    z-index: 1050;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.cookie-consent-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cookie-consent h3 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.cookie-consent p {
+    color: #a8b3bf;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.cookie-consent-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .cookie-consent-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cookie-consent-actions {
+        width: 100%;
+    }
+
+    .cookie-consent-actions .btn {
+        flex: 1;
+    }
+}
+
+/*LIGHT THEME*/
+
+body.light-theme {
+    background-color: #f4f7fb;
+    color: #1b2430;
+}
+
+body.light-theme .navbar {
+    background-color: #ffffff;
+    border-bottom-color: #d6dde6;
+}
+
+body.light-theme .navbar .nav-link {
+    color: #334155 !important;
+}
+
+body.light-theme .navbar .nav-link:hover {
+    color: #2388ff !important;
+}
+
+body.light-theme .hero-section,
+body.light-theme .why-hub {
+    background: #f4f7fb;
+}
+
+body.light-theme .home-intro {
+    background-color: #eaf0f7;
+    border-top-color: #d6dde6;
+}
+
+body.light-theme .hero-title,
+body.light-theme .section-title,
+body.light-theme .home-feature-card h3,
+body.light-theme .why-item h3 {
+    color: #111827;
+}
+
+body.light-theme .hero-description,
+body.light-theme .section-description,
+body.light-theme .home-feature-card p,
+body.light-theme .why-description,
+body.light-theme .why-item p {
+    color: #52606d;
+}
+
+body.light-theme .home-feature-card,
+body.light-theme .why-item {
+    background-color: #ffffff;
+    border-color: #d6dde6;
+}
+
+body.light-theme .home-feature-card:hover,
+body.light-theme .why-item:hover {
+    border-color: #2388ff;
+}
+
+body.light-theme #welcomeUser {
+    color: #111827 !important;
+}

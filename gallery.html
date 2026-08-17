@@ -10,33 +10,156 @@
 </head>
 
 <body>
-    <!-- navigation bar -->
+    <!--constant nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-accent" href="home.html">CS2 HUB</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="tournaments.html">Tournaments</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="teams.html">Teams</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-semibold" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
-                </ul>
-    
-                <div class="d-flex align-items-center gap-3">
-                    <input type="text" id="global-search"
-                        class="form-control form-control-sm bg-dark text-light border-secondary"
-                        placeholder="Search events..." style="width: 200px;">
-                    <span class="badge bg-secondary">Region: Global</span>
+
+            <a class="navbar-brand fw-bold text-accent" href="index.html">
+                CS2 HUB
+            </a>
+
+            <div class="navbar-nav me-auto">
+                <a class="nav-link fw-semibold" href="tournaments.html">
+                    Tournaments
+                </a>
+
+                <a class="nav-link fw-semibold" href="teams.html">
+                    Teams
+                </a>
+
+                <a class="nav-link active fw-semibold" href="gallery.html">
+                    Gallery
+                </a>
+
+                <a class="nav-link fw-semibold" href="about.html">
+                    About
+                </a>
+
+                <a class="nav-link fw-semibold" href="contact.html">
+                    Contact
+                </a>
+            </div>
+
+            <span class="badge bg-secondary">
+                CS2 World Rankings
+            </span>
+
+        </div>
+    </nav>
+    <!-- gallery -->
+    <section class="container py-5">
+        <div class="text-center">
+            <h1 class="fw-bold">CS2 Gallery</h1>
+            <p class="text-secondary">
+                Explore the best moments, teams, players, and action from the world of Counter-Strike 2.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2x3 gallery design -->
+    <section class="container pb-5">
+    <div class="row g-4">
+
+        <!-- Image 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="media/comp_match.jpg" class="card-img-top" alt="CS2 Match">
+                <div class="card-body">
+                    <h5 class="card-title">Competitive Match</h5>
+                    <p class="card-text">
+                        Intense competitive action from Counter-Strike 2.
+                    </p>
                 </div>
             </div>
         </div>
-    </nav>
 
-    <!--start your code here-->
-    <h1> Welcome to CS2 Hub </h1>
+        <!-- Image 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="media/team_player" class="card-img-top" alt="CS2 Team">
+                <div class="card-body">
+                    <h5 class="card-title">Professional Teams</h5>
+                    <p class="card-text">
+                        Professional teams competing at the highest level.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="media/tournaments" class="card-img-top" alt="CS2 Tournament">
+                <div class="card-body">
+                    <h5 class="card-title">Major Tournament</h5>
+                    <p class="card-text">
+                        Highlights from major Counter-Strike 2 tournaments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="media/professional_players" class="card-img-top" alt="CS2 Player">
+                <div class="card-body">
+                    <h5 class="card-title">Professional Players</h5>
+                    <p class="card-text">
+                        Skilled players showcasing their talent in CS2.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="media/esports_action" class="card-img-top" alt="CS2 Esports">
+                <div class="card-body">
+                    <h5 class="card-title">Esports Action</h5>
+                    <p class="card-text">
+                        Exciting moments from the competitive CS2 scene.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="media/championship" class="card-img-top" alt="CS2 Championship">
+                <div class="card-body">
+                    <h5 class="card-title">Championship Moments</h5>
+                    <p class="card-text">
+                        Memorable moments from CS2 championship events.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer class="py-4 mt-5">
+    <div class="container text-center">
+
+        <h5 class="fw-bold">CS2 HUB</h5>
+
+        <p class="text-secondary mb-2">
+            Your hub for Counter-Strike 2 tournaments, teams, and community.
+        </p>
+
+        <div class="mb-3">
+            <a href="#" class="text-decoration-none me-3">Facebook</a>
+            <a href="#" class="text-decoration-none me-3">Instagram</a>
+            <a href="#" class="text-decoration-none">YouTube</a>
+        </div>
+
+        <p class="text-secondary small mb-0">
+            &copy; 2026 CS2 HUB. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+    
 </body>

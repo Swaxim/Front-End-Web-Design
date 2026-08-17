@@ -508,8 +508,37 @@ body.light-theme {
 }
 
 body.light-theme .navbar {
-    background-color: #ffffff;
-    border-bottom-color: #d6dde6;
+    background-color: #ffffff !important;
+    border-bottom-color: #d6dde6 !important;
+}
+
+body.light-theme .navbar-brand {
+    color: #2388ff !important;
+}
+
+body.light-theme .navbar .nav-link {
+    color: #334155 !important;
+}
+
+body.light-theme .navbar .nav-link:hover {
+    color: #2388ff !important;
+}
+
+body.light-theme #welcomeUser {
+    color: #111827 !important;
+}
+
+body.light-theme #logoutButton,
+body.light-theme #themeToggle {
+    color: #111827;
+    border-color: #64748b;
+}
+
+body.light-theme #logoutButton:hover,
+body.light-theme #themeToggle:hover {
+    color: #ffffff;
+    background-color: #2388ff;
+    border-color: #2388ff;
 }
 
 body.light-theme .navbar .nav-link {
@@ -713,4 +742,55 @@ body.light-theme #welcomeUser {
     .about-highlight-card {
         padding: 25px;
     }
+}
+
+/*ABOUT PAGE - LIGHT THEME*/
+
+body.light-theme .about-hero {
+    background: #f4f7fb;
+}
+
+body.light-theme .about-section {
+    background-color: #eaf0f7;
+    border-top-color: #d6dde6;
+}
+
+body.light-theme .about-services {
+    background-color: #f4f7fb;
+    border-top-color: #d6dde6;
+}
+
+body.light-theme .about-values {
+    background-color: #eaf0f7;
+    border-top-color: #d6dde6;
+}
+
+body.light-theme .about-cta {
+    background: #f4f7fb;
+    border-top-color: #d6dde6;
+}
+
+body.light-theme .about-hero-title,
+body.light-theme .about-highlight-card h3,
+body.light-theme .about-service-card h3,
+body.light-theme .value-item h3 {
+    color: #111827;
+}
+
+body.light-theme .about-hero-description,
+body.light-theme .about-text,
+body.light-theme .about-highlight-card p,
+body.light-theme .about-service-card p,
+body.light-theme .value-item p {
+    color: #52606d;
+}
+
+body.light-theme .about-highlight-card,
+body.light-theme .about-service-card {
+    background-color: #ffffff;
+    border-color: #d6dde6;
+}
+
+body.light-theme .value-item {
+    border-bottom-color: #d6dde6;
 }

@@ -171,3 +171,51 @@ footer {
 .card:hover .card-img-top {
     transform: scale(1.05);
 }
+
+/* Make all gallery images the same size */
+.gallery-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Make images inside the popup the same size */
+#modalGallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#galleryModal .modal-content {
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+#galleryModal .modal-header {
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+#galleryModal .modal-title {
+    color: #58a6ff;
+}
+
+#galleryModal .modal-body {
+    background-color: #161b22;
+    color: #c9d1d9;
+}
+
+#galleryModal .modal-footer {
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+}
+
+#galleryModal #modalDescription {
+    color: #8b949e;
+}
+
+/* Close button */
+#galleryModal .btn-close {
+    filter: invert(1);
+}

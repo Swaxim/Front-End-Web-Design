@@ -53,12 +53,12 @@ loginForm.addEventListener("submit", function (event) {
 
         return;
     }
-    
-if (rememberUsernameCheckbox.checked) {
-    setCookie("rememberedUsername", username, 30);
-} else {
-    deleteCookie("rememberedUsername");
-}
+
+    if (rememberUsernameCheckbox.checked) {
+        setCookie("rememberedUsername", username, 30);
+    } else {
+        deleteCookie("rememberedUsername");
+    }
     sessionStorage.setItem("loggedIn", "true");
     sessionStorage.setItem("username", username);
 

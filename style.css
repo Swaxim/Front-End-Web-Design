@@ -283,3 +283,66 @@ footer {
 .feature-link:hover {
     color: #ffffff;
 }
+
+/*HOME PAGE - WHY CS2 HUB*/
+
+.why-hub {
+    background-color: #0d1117;
+    border-top: 1px solid #30363d;
+}
+
+.why-description {
+    color: #a8b3bf;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.why-item {
+    display: flex;
+    gap: 20px;
+    padding: 22px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    transition: border-color 0.25s ease;
+}
+
+.why-item:hover {
+    border-color: #58a6ff;
+}
+
+.why-number {
+    color: #58a6ff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    min-width: 40px;
+}
+
+.why-item h3 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 7px;
+}
+
+.why-item p {
+    color: #a8b3bf;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.why-hub .btn-primary {
+    background-color: #2388ff;
+    border-color: #2388ff;
+}
+
+.why-hub .btn-primary:hover {
+    background-color: #58a6ff;
+    border-color: #58a6ff;
+}

@@ -213,3 +213,73 @@ footer {
         width: 100%;
     }
 }
+
+/*HOME PAGE - INTRO SECTION*/
+
+.home-intro {
+    background-color: #10161f;
+    border-top: 1px solid #30363d;
+}
+
+.section-label {
+    display: inline-block;
+    color: #58a6ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: #a8b3bf;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+.home-feature-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.home-feature-card:hover {
+    transform: translateY(-6px);
+    border-color: #58a6ff;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.home-feature-card h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.home-feature-card p {
+    color: #a8b3bf;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.feature-link {
+    color: #58a6ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.feature-link:hover {
+    color: #ffffff;
+}

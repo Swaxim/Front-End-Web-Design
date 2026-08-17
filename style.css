@@ -346,3 +346,100 @@ footer {
     background-color: #58a6ff;
     border-color: #58a6ff;
 }
+
+/*LOGIN PAGE*/
+
+.login-page {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background:
+        radial-gradient(circle at 50% 25%, rgba(88, 166, 255, 0.12), transparent 35%),
+        #0d1117;
+}
+
+.login-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.login-title {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-description {
+    color: #a8b3bf;
+    margin-bottom: 0;
+}
+
+.login-card .form-label {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.login-card .form-control {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    color: #ffffff;
+    padding: 12px;
+}
+
+.login-card .form-control:focus {
+    background-color: #0d1117;
+    color: #ffffff;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 0.2rem rgba(88, 166, 255, 0.15);
+}
+
+.login-card .form-control::placeholder {
+    color: #6e7681;
+}
+
+.login-card .form-check-label {
+    color: #a8b3bf;
+}
+
+.login-card .btn-primary {
+    background-color: #2388ff;
+    border-color: #2388ff;
+    padding: 11px;
+    font-weight: 600;
+}
+
+.login-card .btn-primary:hover {
+    background-color: #58a6ff;
+    border-color: #58a6ff;
+}
+
+#loginMessage {
+    margin-bottom: 15px;
+}
+
+/*RESPONSIVE NAVBAR ACTIONS*/
+
+@media (max-width: 991.98px) {
+    .navbar-actions {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 12px !important;
+        margin-top: 12px;
+    }
+
+    .navbar-actions #global-search {
+        width: 100% !important;
+    }
+
+    .navbar-actions .badge {
+        width: fit-content;
+    }
+
+    .navbar-actions .btn {
+        width: 100%;
+    }
+}

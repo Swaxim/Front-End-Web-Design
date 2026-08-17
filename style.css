@@ -130,3 +130,86 @@ footer {
 .form-control::placeholder {
     color: #8b949e;
 }
+
+/*HOME PAGE - HERO SECTION*/
+
+.hero-section {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background:
+        radial-gradient(circle at 80% 50%, rgba(88, 166, 255, 0.12), transparent 35%),
+        #0d1117;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #58a6ff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 800;
+    line-height: 1.08;
+    margin-bottom: 24px;
+}
+
+.text-accent {
+    color: #58a6ff !important;
+}
+
+.hero-description {
+    color: #a8b3bf;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-buttons .btn-primary {
+    background-color: #2388ff;
+    border-color: #2388ff;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #58a6ff;
+    border-color: #58a6ff;
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-title {
+        font-size: 2.7rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}

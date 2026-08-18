@@ -16,7 +16,6 @@
         }
     </script>
 
-    <!-- navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold text-accent" href="home.html">CS2 HUB</a>
@@ -35,6 +34,10 @@
                 </ul>
 
                 <div class="navbar-actions d-flex align-items-center gap-3">
+                    <input type="text" id="global-search"
+                        class="form-control form-control-sm bg-dark text-light border-secondary"
+                        placeholder="Search events..." style="width: 180px;">
+
                     <span class="badge bg-secondary">Location: Both Campus</span>
 
                     <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button">
@@ -57,7 +60,6 @@
     </nav>
 
     <div class="container my-4">
-        <!-- stats -->
         <div class="row g-3 mb-4 text-center">
             <div class="col-md-4">
                 <div class="bg-dark-card p-3">
@@ -99,7 +101,6 @@
             </div>
         </div>
 
-        <!-- tournament list -->
         <div id="tournament-list" class="d-flex flex-column gap-3"></div>
     </div>
 

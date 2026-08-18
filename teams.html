@@ -75,6 +75,7 @@
                         <th scope="col" style="width: 80px;">Rank</th>
                         <th scope="col">Team</th>
                         <th scope="col">Faculty</th>
+                        <th scope="col">Points</th>
                         <th scope="col">Active Roster</th>
                     </tr>
                 </thead>
@@ -125,6 +126,8 @@
 
                 filtered.forEach(t => {
                     const playerBadges = t.players.map(p => `<span class="badge badge-roster me-1">${p.handle}</span>`).join('');
+                    const pointsDisplay = t.points !== undefined ? t.points : 0;
+
                     const rowHtml = `
             <tr data-id="${t.id}">
               <td class="fw-bold text-accent">#${t.rank}</td>
@@ -133,6 +136,7 @@
                 <span class="fw-semibold text-light">${t.name}</span>
               </td>
               <td class="text-light">${t.location}</td>
+              <td class="fw-bold text-accent">${pointsDisplay} pts</td>
               <td>${playerBadges}</td>
             </tr>
           `;

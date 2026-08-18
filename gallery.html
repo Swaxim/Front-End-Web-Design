@@ -7,25 +7,20 @@
     <title>Tournaments - CS2 Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
 </head>
 
 <body>
-    <script>
-        if (document.cookie.includes("themePreference=light")) {
-            document.body.classList.add("light-theme");
-        }
-    </script>
 
-    <!--constant nav bar-->
+    <!-- constant nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
 
-            <a class="navbar-brand fw-bold text-accent" href="home.html">
+            <a class="navbar-brand fw-bold text-accent" href="index.html">
                 CS2 HUB
             </a>
 
             <div class="navbar-nav me-auto">
+
                 <a class="nav-link fw-semibold" href="tournaments.html">
                     Tournaments
                 </a>
@@ -45,135 +40,299 @@
                 <a class="nav-link fw-semibold" href="contact.html">
                     Contact
                 </a>
+
             </div>
 
-            <div class="navbar-actions d-flex align-items-center gap-3">
-
-                <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button">
-                    Light Theme
-                </button>
-
-                <a href="login.html" class="btn btn-primary btn-sm" id="loginButton">
-                    Login
-                </a>
-
-                <div id="userArea" class="align-items-center gap-2" style="display: none;">
-                    <span id="welcomeUser" class="text-light fw-semibold"></span>
-                    <button id="logoutButton" class="btn btn-outline-light btn-sm">
-                        Logout
-                    </button>
-                </div>
-            </div>
+            <span class="badge bg-secondary">
+                CS2 World Rankings
+            </span>
 
         </div>
     </nav>
+
+
     <!-- gallery -->
     <section class="container py-5">
+
         <div class="text-center">
-            <h1 class="fw-bold">CS2 Gallery</h1>
+
+            <h1 class="fw-bold">
+                CS2 Gallery
+            </h1>
+
             <p class="text-secondary">
                 Explore the best moments, teams, players, and action from the world of Counter-Strike 2.
             </p>
+
         </div>
+
     </section>
+
 
     <!-- 2x3 gallery design -->
     <section class="container pb-5">
+
         <div class="row g-4">
+
 
             <!-- Image 1 -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="media/comp_match.jpg" class="card-img-top" alt="CS2 Match">
+
+                <div class="card h-100 gallery-card"
+                    data-bs-toggle="modal"
+                    data-bs-target="#galleryModal"
+                    onclick="showGallery(0)">
+
+                    <img src="media/comp_match.jpg"
+                        class="card-img-top"
+                        alt="CS2 Match">
+
                     <div class="card-body">
-                        <h5 class="card-title">Competitive Match</h5>
+
+                        <h5 class="card-title">
+                            Competitive Match
+                        </h5>
+
                         <p class="card-text">
                             Intense competitive action from Counter-Strike 2.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
 
             <!-- Image 2 -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="media/team_player" class="card-img-top" alt="CS2 Team">
+
+                <div class="card h-100 gallery-card"
+                    data-bs-toggle="modal"
+                    data-bs-target="#galleryModal"
+                    onclick="showGallery(1)">
+
+                    <img src="media/team_player"
+                        class="card-img-top"
+                        alt="CS2 Team">
+
                     <div class="card-body">
-                        <h5 class="card-title">Professional Teams</h5>
+
+                        <h5 class="card-title">
+                            Professional Teams
+                        </h5>
+
                         <p class="card-text">
                             Professional teams competing at the highest level.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
 
             <!-- Image 3 -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="media/tournaments" class="card-img-top" alt="CS2 Tournament">
+
+                <div class="card h-100 gallery-card"
+                    data-bs-toggle="modal"
+                    data-bs-target="#galleryModal"
+                    onclick="showGallery(2)">
+
+                    <img src="media/tournaments"
+                        class="card-img-top"
+                        alt="CS2 Tournament">
+
                     <div class="card-body">
-                        <h5 class="card-title">Major Tournament</h5>
+
+                        <h5 class="card-title">
+                            Major Tournament
+                        </h5>
+
                         <p class="card-text">
                             Highlights from major Counter-Strike 2 tournaments.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
 
             <!-- Image 4 -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="media/professional_players" class="card-img-top" alt="CS2 Player">
+
+                <div class="card h-100 gallery-card"
+                    data-bs-toggle="modal"
+                    data-bs-target="#galleryModal"
+                    onclick="showGallery(3)">
+
+                    <img src="media/professional_players"
+                        class="card-img-top"
+                        alt="CS2 Player">
+
                     <div class="card-body">
-                        <h5 class="card-title">Professional Players</h5>
+
+                        <h5 class="card-title">
+                            Professional Players
+                        </h5>
+
                         <p class="card-text">
                             Skilled players showcasing their talent in CS2.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
 
             <!-- Image 5 -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="media/esports_action" class="card-img-top" alt="CS2 Esports">
+
+                <div class="card h-100 gallery-card"
+                    data-bs-toggle="modal"
+                    data-bs-target="#galleryModal"
+                    onclick="showGallery(4)">
+
+                    <img src="media/esports_action"
+                        class="card-img-top"
+                        alt="CS2 Esports">
+
                     <div class="card-body">
-                        <h5 class="card-title">Esports Action</h5>
+
+                        <h5 class="card-title">
+                            Esports Action
+                        </h5>
+
                         <p class="card-text">
                             Exciting moments from the competitive CS2 scene.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
 
             <!-- Image 6 -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="media/championship" class="card-img-top" alt="CS2 Championship">
+
+                <div class="card h-100 gallery-card"
+                    data-bs-toggle="modal"
+                    data-bs-target="#galleryModal"
+                    onclick="showGallery(5)">
+
+                    <img src="media/championship"
+                        class="card-img-top"
+                        alt="CS2 Championship">
+
                     <div class="card-body">
-                        <h5 class="card-title">Championship Moments</h5>
+
+                        <h5 class="card-title">
+                            Championship Moments
+                        </h5>
+
                         <p class="card-text">
                             Memorable moments from CS2 championship events.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
 
         </div>
+
     </section>
+
+
+    <!-- pop up modal for gallery -->
+    <div class="modal fade"
+        id="galleryModal"
+        tabindex="-1"
+        aria-labelledby="galleryModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="galleryModalLabel">
+                        Gallery Information
+                    </h5>
+
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <div class="text-center mb-4">
+
+                        <h3 id="modalTitle"></h3>
+
+                        <p id="modalDescription"
+                            class="text-secondary">
+                        </p>
+
+                    </div>
+
+
+                    <!-- Extra images appear here -->
+                    <div class="row g-3"
+                        id="modalGallery">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
     <footer class="py-4 mt-5">
+
         <div class="container text-center">
 
-            <h5 class="fw-bold">CS2 HUB</h5>
+            <h5 class="fw-bold">
+                CS2 HUB
+            </h5>
 
             <p class="text-secondary mb-2">
                 Your hub for Counter-Strike 2 tournaments, teams, and community.
             </p>
 
             <div class="mb-3">
-                <a href="#" class="text-decoration-none me-3">Facebook</a>
-                <a href="#" class="text-decoration-none me-3">Instagram</a>
-                <a href="#" class="text-decoration-none">YouTube</a>
+
+                <a href="#" class="text-decoration-none me-3">
+                    Facebook
+                </a>
+
+                <a href="#" class="text-decoration-none me-3">
+                    Instagram
+                </a>
+
+                <a href="#" class="text-decoration-none">
+                    YouTube
+                </a>
+
             </div>
 
             <p class="text-secondary small mb-0">
@@ -181,6 +340,158 @@
             </p>
 
         </div>
+
     </footer>
 
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Gallery JavaScript -->
+    <script>
+
+        const galleryData = [
+
+            /* Image 1 - Competitive Match */
+            {
+                title: "Competitive Match",
+
+                description:
+                    "Intense competitive action from Counter-Strike 2.",
+
+                images: [
+                    "media/comp_match",
+                    "media/comp_match2",
+                    "media/comp_match3.jpg",
+                    "media/comp_match4.jpg",
+                ]
+            },
+
+
+            /* Image 2 - Professional Teams */
+            {
+                title: "Professional Teams",
+
+                description:
+                    "Professional teams competing at the highest level.",
+
+                images: [
+                    "media/team_player",
+                    "media/team_player2",
+                    "media/team_player3.jpg",
+                    "media/team_player4.jpg",
+                ]
+            },
+
+
+            /* Image 3 - Major Tournament */
+            {
+                title: "Major Tournament",
+
+                description:
+                    "Highlights from major Counter-Strike 2 tournaments.",
+
+                images: [
+                    "media/tournaments",
+                    "media/tournaments2",
+                    "media/tournaments3.jpg",
+                    "media/tournaments4.jpg",
+                ]
+            },
+
+
+            /* Image 4 - Professional Players */
+            {
+                title: "Professional Players",
+
+                description:
+                    "Skilled players showcasing their talent in CS2.",
+
+                images: [
+                    "media/professional_players",
+                    "media/professional_players2.jpg",
+                    "media/professional_players3.jpg",
+                    "media/professional_players4.jpg",
+                ]
+            },
+
+
+            /* Image 5 - Esports Action */
+            {
+                title: "Esports Action",
+
+                description:
+                    "Exciting moments from the competitive CS2 scene.",
+
+                images: [
+                    "media/esports_action",
+                    "media/esports_action2.jpg",
+                    "media/esports_action3.jpg",
+                    "media/esports_action4.jpg",
+                ]
+            },
+
+
+            /* Image 6 - Championship Moments */
+            {
+                title: "Championship Moments",
+
+                description:
+                    "Memorable moments from CS2 championship events.",
+
+                images: [
+                    "media/championship",
+                    "media/championship2.jpg",
+                    "media/championship3.jpg",
+                    "media/championship4.jpg",
+                ]
+            }
+
+        ];
+
+
+        function showGallery(index) {
+
+            const gallery = galleryData[index];
+
+            document.getElementById("modalTitle").textContent =
+                gallery.title;
+
+            document.getElementById("modalDescription").textContent =
+                gallery.description;
+
+
+            const modalGallery =
+                document.getElementById("modalGallery");
+
+
+            modalGallery.innerHTML = "";
+
+
+            // able to add image
+            gallery.images.forEach(function (image) {
+
+                modalGallery.innerHTML += `
+
+                    <div class="col-md-6">
+
+                        <img
+                            src="${image}"
+                            class="img-fluid rounded w-100"
+                            alt="${gallery.title}"
+                        >
+
+                    </div>
+
+                `;
+
+            });
+
+        }
+
+    </script>
+
 </body>
+
+</html>

@@ -15,36 +15,22 @@
     <!-- constant nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-accent" href="home.html">CS2 HUB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <a class="navbar-brand fw-bold text-accent" href="home.html">
-                CS2 HUB
-            </a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="tournaments.html">Tournaments</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="teams.html">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+                </ul>
 
-            <div class="navbar-nav me-auto">
+                <div class="navbar-actions d-flex align-items-center gap-3">
 
-                <a class="nav-link fw-semibold" href="tournaments.html">
-                    Tournaments
-                </a>
-
-                <a class="nav-link fw-semibold" href="teams.html">
-                    Teams
-                </a>
-
-                <a class="nav-link active fw-semibold" href="gallery.html">
-                    Gallery
-                </a>
-
-                <a class="nav-link fw-semibold" href="about.html">
-                    About
-                </a>
-
-                <a class="nav-link fw-semibold" href="contact.html">
-                    Contact
-                </a>
-
-            </div>
-
-            <div class="navbar-actions d-flex align-items-center gap-3">
                     <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button">
                         Light Theme
                     </button>
@@ -54,13 +40,17 @@
                     </a>
 
                     <div id="userArea" class="align-items-center gap-2" style="display: none;">
+
                         <span id="welcomeUser" class="text-light fw-semibold"></span>
+
                         <button id="logoutButton" class="btn btn-outline-light btn-sm">
                             Logout
                         </button>
-                    </div>
-                </div>
 
+                    </div>
+
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -97,7 +87,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(0)">
 
-                    <img src="media/comp_match.jpg"
+                    <img src="media/comp_match5.jpg"
                         class="card-img-top"
                         alt="CS2 Match">
 
@@ -126,7 +116,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(1)">
 
-                    <img src="media/team_player"
+                    <img src="media/team_player.jpg"
                         class="card-img-top"
                         alt="CS2 Team">
 
@@ -155,7 +145,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(2)">
 
-                    <img src="media/tournaments"
+                    <img src="media/tournaments.jpg"
                         class="card-img-top"
                         alt="CS2 Tournament">
 
@@ -184,7 +174,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(3)">
 
-                    <img src="media/professional_players"
+                    <img src="media/professional_players.jpg"
                         class="card-img-top"
                         alt="CS2 Player">
 
@@ -213,7 +203,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(4)">
 
-                    <img src="media/esports_action"
+                    <img src="media/esports_action.jpg"
                         class="card-img-top"
                         alt="CS2 Esports">
 
@@ -242,7 +232,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(5)">
 
-                    <img src="media/championship"
+                    <img src="media/championship.jpg"
                         class="card-img-top"
                         alt="CS2 Championship">
 
@@ -370,8 +360,8 @@
                     "Intense competitive action from Counter-Strike 2.",
 
                 images: [
-                    "media/comp_match",
-                    "media/comp_match2",
+                    "media/comp_match5.jpg",
+                    "media/comp_match2.jpg",
                     "media/comp_match3.jpg",
                     "media/comp_match4.jpg",
                 ]
@@ -386,8 +376,8 @@
                     "Professional teams competing at the highest level.",
 
                 images: [
-                    "media/team_player",
-                    "media/team_player2",
+                    "media/team_player.jpg",
+                    "media/team_player2.jpg",
                     "media/team_player3.jpg",
                     "media/team_player4.jpg",
                 ]
@@ -402,8 +392,8 @@
                     "Highlights from major Counter-Strike 2 tournaments.",
 
                 images: [
-                    "media/tournaments",
-                    "media/tournaments2",
+                    "media/tournaments.jpg",
+                    "media/tournaments2.jpg",
                     "media/tournaments3.jpg",
                     "media/tournaments4.jpg",
                 ]
@@ -418,7 +408,7 @@
                     "Skilled players showcasing their talent in CS2.",
 
                 images: [
-                    "media/professional_players",
+                    "media/professional_players5.jpg",
                     "media/professional_players2.jpg",
                     "media/professional_players3.jpg",
                     "media/professional_players4.jpg",
@@ -434,7 +424,7 @@
                     "Exciting moments from the competitive CS2 scene.",
 
                 images: [
-                    "media/esports_action",
+                    "media/esports_action.jpg",
                     "media/esports_action2.jpg",
                     "media/esports_action3.jpg",
                     "media/esports_action4.jpg",
@@ -450,7 +440,7 @@
                     "Memorable moments from CS2 championship events.",
 
                 images: [
-                    "media/championship",
+                    "media/championship.jpg",
                     "media/championship2.jpg",
                     "media/championship3.jpg",
                     "media/championship4.jpg",

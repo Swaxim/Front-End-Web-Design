@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const cookieConsent = document.getElementById("cookieConsent");
+    // Updated line to support both class (.cookie-consent) and id (#cookieConsent)
+    const cookieConsent = document.querySelector(".cookie-consent") || document.getElementById("cookieConsent");
     const acceptCookies = document.getElementById("acceptCookies");
     const declineCookies = document.getElementById("declineCookies");
 
@@ -73,14 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (acceptCookies) {
         acceptCookies.addEventListener("click", function () {
             setCookie("cookieConsent", "accepted", 365);
-            cookieConsent.style.display = "none";
+            if (cookieConsent) cookieConsent.style.display = "none";
         });
     }
 
     if (declineCookies) {
         declineCookies.addEventListener("click", function () {
             setCookie("cookieConsent", "declined", 365);
-            cookieConsent.style.display = "none";
+            if (cookieConsent) cookieConsent.style.display = "none";
         });
     }
 
@@ -118,4 +119,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    const tourneyRows = document.querySelectorAll('.list-row-item');
+    tourneyRows.forEach(row => {
+        row.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+
+            const panel = row.querySelector('.tourney-details-panel');
+            if (panel) {
+                const isVisible = panel.style.display === 'block';
+                panel.style.display = isVisible ? 'none' : 'block';
+            }
+        });
+    });
 });

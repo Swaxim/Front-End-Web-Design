@@ -10,6 +10,12 @@
     <script src="main.js"></script>
 </head>
 
+    <script>
+        if (document.cookie.includes("themePreference=light")) {
+            document.body.classList.add("light-theme");
+        }
+    </script>
+
 <body>
 
     <!-- constant nav bar -->
@@ -126,7 +132,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(1)">
 
-                    <img src="media/team_player"
+                    <img src="media/team_player.jpg"
                         class="card-img-top"
                         alt="CS2 Team">
 
@@ -155,7 +161,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(2)">
 
-                    <img src="media/tournaments"
+                    <img src="media/tournaments.jpg"
                         class="card-img-top"
                         alt="CS2 Tournament">
 
@@ -184,7 +190,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(3)">
 
-                    <img src="media/professional_players"
+                    <img src="media/professional_players.jpg"
                         class="card-img-top"
                         alt="CS2 Player">
 
@@ -213,7 +219,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(4)">
 
-                    <img src="media/esports_action"
+                    <img src="media/esports_action.jpg"
                         class="card-img-top"
                         alt="CS2 Esports">
 
@@ -242,7 +248,7 @@
                     data-bs-target="#galleryModal"
                     onclick="showGallery(5)">
 
-                    <img src="media/championship"
+                    <img src="media/championship.jpg"
                         class="card-img-top"
                         alt="CS2 Championship">
 
@@ -371,8 +377,8 @@
                     "Intense competitive action from Counter-Strike 2.",
 
                 images: [
-                    "media/comp_match",
-                    "media/comp_match2",
+                    "media/comp_match.jpg",
+                    "media/comp_match2.jpg",
                     "media/comp_match3.jpg",
                     "media/comp_match4.jpg",
                 ]
@@ -387,8 +393,8 @@
                     "Professional teams competing at the highest level.",
 
                 images: [
-                    "media/team_player",
-                    "media/team_player2",
+                    "media/team_player.jpg",
+                    "media/team_player2.jpg",
                     "media/team_player3.jpg",
                     "media/team_player4.jpg",
                 ]
@@ -403,8 +409,8 @@
                     "Highlights from major Counter-Strike 2 tournaments.",
 
                 images: [
-                    "media/tournaments",
-                    "media/tournaments2",
+                    "media/tournaments.jpg",
+                    "media/tournaments2.jpg",
                     "media/tournaments3.jpg",
                     "media/tournaments4.jpg",
                 ]
@@ -419,7 +425,7 @@
                     "Skilled players showcasing their talent in CS2.",
 
                 images: [
-                    "media/professional_players",
+                    "media/professional_players.jpg",
                     "media/professional_players2.jpg",
                     "media/professional_players3.jpg",
                     "media/professional_players4.jpg",
@@ -435,7 +441,7 @@
                     "Exciting moments from the competitive CS2 scene.",
 
                 images: [
-                    "media/esports_action",
+                    "media/esports_action.jpg",
                     "media/esports_action2.jpg",
                     "media/esports_action3.jpg",
                     "media/esports_action4.jpg",
@@ -451,7 +457,7 @@
                     "Memorable moments from CS2 championship events.",
 
                 images: [
-                    "media/championship",
+                    "media/championship.jpg",
                     "media/championship2.jpg",
                     "media/championship3.jpg",
                     "media/championship4.jpg",

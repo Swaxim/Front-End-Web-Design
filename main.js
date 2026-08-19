@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sessionStorage.removeItem("loggedIn");
             sessionStorage.removeItem("username");
 
-            window.location.href = "home.html";
+            window.location.href = "index.html";
         });
     }
 

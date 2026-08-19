@@ -62,5 +62,5 @@ loginForm.addEventListener("submit", function (event) {
     sessionStorage.setItem("loggedIn", "true");
     sessionStorage.setItem("username", username);
 
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 });

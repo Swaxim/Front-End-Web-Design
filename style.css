@@ -346,6 +346,7 @@ footer {
 }
 
 .cookie-consent {
+    display: none;
     position: fixed;
     bottom: 20px;
     left: 50%;

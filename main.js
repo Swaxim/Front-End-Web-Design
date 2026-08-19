@@ -55,67 +55,67 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "home.html";
         });
     }
-    
-const cookieConsent = document.getElementById("cookieConsent");
-const acceptCookies = document.getElementById("acceptCookies");
-const declineCookies = document.getElementById("declineCookies");
 
-const cookiePreference = getCookie("cookieConsent");
+    const cookieConsent = document.getElementById("cookieConsent");
+    const acceptCookies = document.getElementById("acceptCookies");
+    const declineCookies = document.getElementById("declineCookies");
 
-if (cookieConsent) {
-    if (cookiePreference === "accepted" || cookiePreference === "declined") {
-        cookieConsent.style.display = "none";
-    } else {
-        cookieConsent.style.display = "block";
-    }
-}
+    const cookiePreference = getCookie("cookieConsent");
 
-if (acceptCookies) {
-    acceptCookies.addEventListener("click", function () {
-        setCookie("cookieConsent", "accepted", 365);
-        cookieConsent.style.display = "none";
-    });
-}
-
-if (declineCookies) {
-    declineCookies.addEventListener("click", function () {
-        setCookie("cookieConsent", "declined", 365);
-        cookieConsent.style.display = "none";
-    });
-}
-
-const themeToggle = document.getElementById("themeToggle");
-const savedTheme = getCookie("themePreference");
-
-if (savedTheme === "light") {
-    document.body.classList.add("light-theme");
-
-    if (themeToggle) {
-        themeToggle.textContent = "Dark Theme";
-    }
-} else {
-    document.body.classList.remove("light-theme");
-
-    if (themeToggle) {
-        themeToggle.textContent = "Light Theme";
-    }
-}
-
-if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-
-        const isLightTheme =
-            document.body.classList.toggle("light-theme");
-
-        if (isLightTheme) {
-            setCookie("themePreference", "light", 365);
-            themeToggle.textContent = "Dark Theme";
+    if (cookieConsent) {
+        if (cookiePreference === "accepted" || cookiePreference === "declined") {
+            cookieConsent.style.display = "none";
         } else {
-            setCookie("themePreference", "dark", 365);
+            cookieConsent.style.display = "block";
+        }
+    }
+
+    if (acceptCookies) {
+        acceptCookies.addEventListener("click", function () {
+            setCookie("cookieConsent", "accepted", 365);
+            cookieConsent.style.display = "none";
+        });
+    }
+
+    if (declineCookies) {
+        declineCookies.addEventListener("click", function () {
+            setCookie("cookieConsent", "declined", 365);
+            cookieConsent.style.display = "none";
+        });
+    }
+
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = getCookie("themePreference");
+
+    if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+
+        if (themeToggle) {
+            themeToggle.textContent = "Dark Theme";
+        }
+    } else {
+        document.body.classList.remove("light-theme");
+
+        if (themeToggle) {
             themeToggle.textContent = "Light Theme";
         }
+    }
 
-    });
-}
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+
+            const isLightTheme =
+                document.body.classList.toggle("light-theme");
+
+            if (isLightTheme) {
+                setCookie("themePreference", "light", 365);
+                themeToggle.textContent = "Dark Theme";
+            } else {
+                setCookie("themePreference", "dark", 365);
+                themeToggle.textContent = "Light Theme";
+            }
+
+        });
+    }
 
 });

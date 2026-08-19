@@ -1,6 +1,6 @@
 const siteData = {
     "stats": {
-        "totalPrize": "$8,500,000",
+        "totalPrize": "$2,300",
         "activeTournaments": 6,
         "trackedTeams": 8
     },
@@ -14,12 +14,12 @@ const siteData = {
         {
             "id": "t1",
             "status": "upcoming",
-            "name": "PGL Major Singapore 2026",
+            "name": "PGL Major Utar 2026",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=PGL",
             "date": "Nov 25 - Dec 13, 2026",
-            "location": "Kallang, Singapore",
-            "prize": "$1,250,000",
-            "prizeBreakdown": "1st: $500,000 | 2nd: $170,000 | 3rd-4th: $80,000",
+            "location": "Hall, Utar, Sungai Long",
+            "prize": "$500",
+            "prizeBreakdown": "1st: $250 | 2nd: $150 | 3rd-4th: $100",
             "teams": [
                 {
                     "name": "Team Falcons",
@@ -45,9 +45,9 @@ const siteData = {
             "name": "BLAST Open Fall 2026",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=BLAST",
             "date": "Aug 26 - Sep 6, 2026",
-            "location": "Porto, Portugal",
-            "prize": "$1,100,000",
-            "prizeBreakdown": "1st: $450,000 | 2nd: $150,000 | 3rd-4th: $75,000",
+            "location": "Hall, Utar",
+            "prize": "$100",
+            "prizeBreakdown": "1st: $50 | 2nd: $30 | 3rd-4th: $20",
             "teams": [
                 {
                     "name": "FURIA",
@@ -73,9 +73,9 @@ const siteData = {
             "name": "ESL Pro League Season 23",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=ESL",
             "date": "Oct 1 - Oct 20, 2026",
-            "location": "Saint Julian's, Malta",
-            "prize": "$850,000",
-            "prizeBreakdown": "1st: $200,000 | 2nd: $90,000 | 3rd-4th: $50,000",
+            "location": "Hall, Utar",
+            "prize": "$300",
+            "prizeBreakdown": "1st: $150 | 2nd: $100 | 3rd-4th: $50",
             "teams": [
                 {
                     "name": "Team Liquid",
@@ -94,12 +94,12 @@ const siteData = {
         {
             "id": "t4",
             "status": "past",
-            "name": "IEM Cologne Major 2026",
+            "name": "IEM Utar Major 2026",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=IEM",
             "date": "Jun 2 - Jun 21, 2026",
-            "location": "Cologne, Germany",
-            "prize": "$1,250,000",
-            "prizeBreakdown": "1st: $400,000 | 2nd: $180,000 | 3rd-4th: $80,000",
+            "location": "Hall, Utar",
+            "prize": "$1000",
+            "prizeBreakdown": "1st: $500 | 2nd: $350 | 3rd-4th: $150",
             "winner": "Team Falcons",
             "runnerUp": "Team Vitality"
         },
@@ -109,21 +109,21 @@ const siteData = {
             "name": "BLAST Premier Spring Final 2026",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=BLAST",
             "date": "Jun 10 - Jun 15, 2026",
-            "location": "London, United Kingdom",
-            "prize": "$425,000",
-            "prizeBreakdown": "1st: $200,000 | 2nd: $85,000 | 3rd-4th: $40,000",
+            "location": "Hall, Utar",
+            "prize": "$300",
+            "prizeBreakdown": "1st: $150 | 2nd: $100 | 3rd-4th: $50",
             "winner": "Team Spirit",
             "runnerUp": "Natus Vincere"
         },
         {
             "id": "t6",
             "status": "past",
-            "name": "IEM Chengdu 2026",
+            "name": "IEM Utar 2026",
             "logo": "https://placehold.co/60x60/161b22/58a6ff?text=IEM",
             "date": "Apr 8 - Apr 14, 2026",
-            "location": "Chengdu, China",
-            "prize": "$250,000",
-            "prizeBreakdown": "1st: $100,000 | 2nd: $42,000 | 3rd-4th: $20,000",
+            "location": "Hall, Utar, Sungai Long",
+            "prize": "$100",
+            "prizeBreakdown": "1st: $50 | 2nd: $30 | 3rd-4th: $20",
             "winner": "MOUZ",
             "runnerUp": "FaZe Clan"
         }
@@ -132,10 +132,11 @@ const siteData = {
         {
             "id": "team1",
             "rank": 1,
-            "region": "Europe",
+            "region": "Kampar",
             "name": "Team Falcons",
+            "points": 967,
             "logo": "/media/falcons_logo.webp",
-            "location": "Saudi Arabia",
+            "location": "FICT",
             "description": "Premier esports organization dominating the 2026 CS2 circuit.",
             "players": [
                 {
@@ -178,10 +179,11 @@ const siteData = {
         {
             "id": "team2",
             "rank": 2,
-            "region": "Europe",
+            "region": "Kampar",
             "name": "Team Vitality",
+            "points": 763,
             "logo": "/media/Vitality_logo.jpg",
-            "location": "France",
+            "location": "FEGT",
             "description": "European powerhouse featuring legendary AWPer ZywOo.",
             "players": [
                 {
@@ -224,10 +226,11 @@ const siteData = {
         {
             "id": "team3",
             "rank": 3,
-            "region": "Europe",
+            "region": "Kampar",
             "name": "Team Spirit",
+            "points": 599,
             "logo": "/media/spirit_logo.png",
-            "location": "Serbia",
+            "location": "FSC",
             "description": "High-powered lineup led by star rifler donk.",
             "players": [
                 {
@@ -270,10 +273,11 @@ const siteData = {
         {
             "id": "team4",
             "rank": 4,
-            "region": "Europe",
+            "region": "Kampar",
             "name": "Natus Vincere",
+            "points": 560,
             "logo": "/media/navi_logo.png",
-            "location": "Ukraine",
+            "location": "FCI",
             "description": "Tactical powerhouse with tactical discipline and high individual skill.",
             "players": [
                 {
@@ -316,10 +320,11 @@ const siteData = {
         {
             "id": "team5",
             "rank": 5,
-            "region": "Europe",
+            "region": "Kampar",
             "name": "MOUZ",
+            "points": 432,
             "logo": "/media/mouz_logo.png",
-            "location": "Germany",
+            "location": "FAM",
             "description": "Young squad known for high explosive firepower and structured team execution.",
             "players": [
                 {
@@ -362,10 +367,11 @@ const siteData = {
         {
             "id": "team6",
             "rank": 6,
-            "region": "Europe",
+            "region": "Sungai Long",
             "name": "FaZe Clan",
+            "points": 400,
             "logo": "/media/faze_logo.png",
-            "location": "USA / Europe",
+            "location": "FAS",
             "description": "Legendary international roster capable of clutch comebacks.",
             "players": [
                 {
@@ -408,10 +414,11 @@ const siteData = {
         {
             "id": "team7",
             "rank": 7,
-            "region": "Americas",
+            "region": "Sungai Long",
             "name": "FURIA Esports",
+            "points": 350,
             "logo": "/media/furia_logo.svg",
-            "location": "Brazil",
+            "location": "FED",
             "description": "Aggressive playstyle organization representing South American CS2.",
             "players": [
                 {
@@ -454,10 +461,11 @@ const siteData = {
         {
             "id": "team8",
             "rank": 8,
-            "region": "Americas",
+            "region": "Kampar",
             "name": "Team Liquid",
+            "points": 218,
             "logo": "/media/liquid_logo.png",
-            "location": "USA",
+            "location": "FBF",
             "description": "North American flagship organization rebuilt for international competition.",
             "players": [
                 {

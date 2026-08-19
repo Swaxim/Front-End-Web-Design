@@ -11,14 +11,14 @@
 
 <body>
     <script>
-        if (document.cookie.includes("themePreference=light")) {
-            document.body.classList.add("light-theme");
-        }
+    if (localStorage.getItem("themePreference") === "light") {
+        document.body.classList.add("light-theme");
+    }
     </script>
 
     <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-accent" href="home.html">CS2 HUB</a>
+            <a class="navbar-brand fw-bold text-accent" href="index.html">CS2 HUB</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -89,19 +89,30 @@
             </div>
         </div>
 
-        <div id="cookie-banner"
-            class="position-fixed bottom-0 start-0 end-0 bg-dark text-light p-3 border-top border-secondary shadow"
-            style="display: none; z-index: 1050;">
-            <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
-                <span>We use cookies to remember your navigation preferences. Accept?</span>
-                <div>
-                    <button id="accept-cookies-btn" class="btn btn-primary btn-sm me-2">Accept</button>
-                    <button id="decline-cookies-btn" class="btn btn-outline-light btn-sm">Decline</button>
-                </div>
+        <div id="tournament-list" class="d-flex flex-column gap-3"></div>
+    </div>
+
+    <!-- Shared Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-consent-content">
+            <div>
+                <h3>Cookie Preferences</h3>
+                <p>
+                    CS2 Hub uses cookies to remember your username and website
+                    preferences for a more personalised experience.
+                </p>
+            </div>
+
+            <div class="cookie-consent-actions">
+                <button id="acceptCookies" class="btn btn-primary">
+                    Accept
+                </button>
+
+                <button id="declineCookies" class="btn btn-outline-light">
+                    Decline
+                </button>
             </div>
         </div>
-
-        <div id="tournament-list" class="d-flex flex-column gap-3"></div>
     </div>
 
     <script src="data.json"></script>
@@ -110,30 +121,6 @@
     <script src="main.js"></script>
     <script>
         $(document).ready(function () {
-            // cookie
-            const hasConsent = localStorage.getItem("cookie_consent");
-
-            if (hasConsent === "granted") {
-                setLastPageCookie();
-            } else if (hasConsent === null) {
-                $("#cookie-banner").fadeIn();
-            }
-
-            $("#accept-cookies-btn").on("click", function () {
-                localStorage.setItem("cookie_consent", "granted");
-                setLastPageCookie();
-                $("#cookie-banner").fadeOut();
-            });
-
-            $("#decline-cookies-btn").on("click", function () {
-                localStorage.setItem("cookie_consent", "denied");
-                $("#cookie-banner").fadeOut();
-            });
-
-            function setLastPageCookie() {
-                document.cookie = "last_page=tournaments.html; path=/; SameSite=Lax";
-            }
-
             // stat banner
             $("#stat-prize").text(siteData.stats.totalPrize);
             $("#stat-events").text(siteData.stats.activeTournaments);

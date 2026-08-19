@@ -11,9 +11,9 @@
 
 <body>
     <script>
-        if (document.cookie.includes("themePreference=light")) {
-            document.body.classList.add("light-theme");
-        }
+    if (localStorage.getItem("themePreference") === "light") {
+        document.body.classList.add("light-theme");
+    }
     </script>
 
     <!-- navigation bar -->

@@ -1,29 +1,3 @@
-function setCookie(name, value, days) {
-    const expiryDate = new Date();
-    expiryDate.setTime(expiryDate.getTime() + (days * 24 * 60 * 60 * 1000));
-
-    document.cookie =
-        name + "=" + encodeURIComponent(value) +
-        "; expires=" + expiryDate.toUTCString() +
-        "; path=/";
-}
-
-function getCookie(name) {
-    const cookieName = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieParts = decodedCookie.split(";");
-
-    for (let i = 0; i < cookieParts.length; i++) {
-        let cookie = cookieParts[i].trim();
-
-        if (cookie.indexOf(cookieName) === 0) {
-            return cookie.substring(cookieName.length);
-        }
-    }
-
-    return "";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     const loggedIn = sessionStorage.getItem("loggedIn");
     const username = sessionStorage.getItem("username");
@@ -56,12 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Updated line to support both class (.cookie-consent) and id (#cookieConsent)
     const cookieConsent = document.querySelector(".cookie-consent") || document.getElementById("cookieConsent");
     const acceptCookies = document.getElementById("acceptCookies");
     const declineCookies = document.getElementById("declineCookies");
 
-    const cookiePreference = getCookie("cookieConsent");
+    const cookiePreference = localStorage.getItem("cookieConsent");
 
     if (cookieConsent) {
         if (cookiePreference === "accepted" || cookiePreference === "declined") {
@@ -73,20 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (acceptCookies) {
         acceptCookies.addEventListener("click", function () {
-            setCookie("cookieConsent", "accepted", 365);
+            localStorage.setItem("cookieConsent", "accepted");
             if (cookieConsent) cookieConsent.style.display = "none";
         });
     }
 
     if (declineCookies) {
         declineCookies.addEventListener("click", function () {
-            setCookie("cookieConsent", "declined", 365);
+            localStorage.setItem("cookieConsent", "declined");
             if (cookieConsent) cookieConsent.style.display = "none";
         });
     }
 
     const themeToggle = document.getElementById("themeToggle");
-    const savedTheme = getCookie("themePreference");
+    const savedTheme = localStorage.getItem("themePreference");
 
     if (savedTheme === "light") {
         document.body.classList.add("light-theme");
@@ -104,18 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (themeToggle) {
         themeToggle.addEventListener("click", function () {
-
-            const isLightTheme =
-                document.body.classList.toggle("light-theme");
+            const isLightTheme = document.body.classList.toggle("light-theme");
 
             if (isLightTheme) {
-                setCookie("themePreference", "light", 365);
+                localStorage.setItem("themePreference", "light");
                 themeToggle.textContent = "Dark Theme";
             } else {
-                setCookie("themePreference", "dark", 365);
+                localStorage.setItem("themePreference", "dark");
                 themeToggle.textContent = "Light Theme";
             }
-
         });
     }
 

@@ -135,7 +135,7 @@ const siteData = {
             "region": "Kampar",
             "name": "Team Falcons",
             "points": 967,
-            "logo": "/media/falcons_logo.webp",
+            "logo": "media/falcons_logo.webp",
             "location": "FICT",
             "description": "Premier esports organization dominating the 2026 CS2 circuit.",
             "players": [
@@ -182,7 +182,7 @@ const siteData = {
             "region": "Kampar",
             "name": "Team Vitality",
             "points": 763,
-            "logo": "/media/Vitality_logo.jpg",
+            "logo": "media/Vitality_logo.jpg",
             "location": "FEGT",
             "description": "European powerhouse featuring legendary AWPer ZywOo.",
             "players": [
@@ -229,7 +229,7 @@ const siteData = {
             "region": "Kampar",
             "name": "Team Spirit",
             "points": 599,
-            "logo": "/media/spirit_logo.png",
+            "logo": "media/spirit_logo.png",
             "location": "FSC",
             "description": "High-powered lineup led by star rifler donk.",
             "players": [
@@ -276,7 +276,7 @@ const siteData = {
             "region": "Kampar",
             "name": "Natus Vincere",
             "points": 560,
-            "logo": "/media/navi_logo.png",
+            "logo": "media/navi_logo.png",
             "location": "FCI",
             "description": "Tactical powerhouse with tactical discipline and high individual skill.",
             "players": [
@@ -323,7 +323,7 @@ const siteData = {
             "region": "Kampar",
             "name": "MOUZ",
             "points": 432,
-            "logo": "/media/mouz_logo.png",
+            "logo": "media/mouz_logo.png",
             "location": "FAM",
             "description": "Young squad known for high explosive firepower and structured team execution.",
             "players": [
@@ -370,7 +370,7 @@ const siteData = {
             "region": "Sungai Long",
             "name": "FaZe Clan",
             "points": 400,
-            "logo": "/media/faze_logo.png",
+            "logo": "media/faze_logo.png",
             "location": "FAS",
             "description": "Legendary international roster capable of clutch comebacks.",
             "players": [
@@ -417,7 +417,7 @@ const siteData = {
             "region": "Sungai Long",
             "name": "FURIA Esports",
             "points": 350,
-            "logo": "/media/furia_logo.svg",
+            "logo": "media/furia_logo.svg",
             "location": "FED",
             "description": "Aggressive playstyle organization representing South American CS2.",
             "players": [
@@ -464,7 +464,7 @@ const siteData = {
             "region": "Kampar",
             "name": "Team Liquid",
             "points": 218,
-            "logo": "/media/liquid_logo.png",
+            "logo": "media/liquid_logo.png",
             "location": "FBF",
             "description": "North American flagship organization rebuilt for international competition.",
             "players": [
